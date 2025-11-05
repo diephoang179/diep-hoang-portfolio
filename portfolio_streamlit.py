@@ -9,10 +9,7 @@ menu = ["About Me", "Delivery Analysis Project"]
 choice = st.sidebar.radio('📋 Menu', menu)
 
 st.sidebar.markdown("---")  # Đường kẻ phân cách
-st.sidebar.markdown("""**Contact me**
-    
-    I always welcome new insights and feedback. Please don’t hesitate to contact me via email or LinkedIn.
-    """)
+st.sidebar.markdown("""**Contact me**""")
 st.sidebar.markdown("📧 hdiep0508@gmail.com")
 st.sidebar.markdown("🔗 [Linkedin](www.linkedin.com/in/diep-hoang-393779a9)")
 
@@ -20,7 +17,7 @@ if choice == 'About Me':
     st.subheader("About Me")
     col1, col2 = st.columns([1, 4])
     with col1:
-        st.image("D:/working plan/CV/portfolio/me.jpg", width=190)
+        st.image("me.jpg", width=190)
     with col2:
         st.markdown("""
         **👋 Hi, My name is Diep Hoang.**\\
@@ -73,7 +70,7 @@ if choice == 'Delivery Analysis Project':
         ##### III. Data Analysis
         ###### 1. Carrier fleet capacity overview
         """)
-    st.image("D:/working plan/CV/portfolio/carrier_fleet_capacity.jpg", caption="Carrier fleet capacity", use_container_width=True)
+    st.image("carrier_fleet_capacity.jpg", caption="Carrier fleet capacity", use_container_width=True)
     st.write("""
         From the chart, we can observe that:
         - Carrier A is rarely used and mainly provides light trucks (≤ 2 tons).
@@ -85,10 +82,10 @@ if choice == 'Delivery Analysis Project':
         
         ###### 2. Time performance
         """)
-    st.image("D:/working plan/CV/portfolio/time_performance.jpg", caption="Time performance", use_container_width=True)
+    st.image("time_performance.jpg", caption="Time performance", use_container_width=True)
 
     # Đọc dữ liệu để tạo bảng thống kê mô tả cho 2 chỉ số time performance
-    clean_data = pd.read_csv("D:/working plan/CV/portfolio/data_cleaning.csv")
+    clean_data = pd.read_csv("data_cleaning.csv")
     time_data = clean_data[["pickup_time (days)","delivery_time (days)"]]
     # Xem thống kê mô tả
     # Hiển thị tiêu đề
@@ -108,16 +105,17 @@ if choice == 'Delivery Analysis Project':
         However, since most carriers operate on unique routes and the available data is limited, we cannot further explore deeper insights about delivery time at this stage.
         ###### 2. Truck utiliztion rate
         """)
-    st.image("D:/working plan/CV/portfolio/truck_utilization.jpg", caption="Truck utilization rate", use_container_width=True)
+    st.image("truck_utilization.jpg", caption="Truck utilization rate", use_container_width=True)
     st.write("""
         The table and indicators show that the truck utilization rate is at a good level (over 99%)..
 
         We can also see more details about the amount of goods that need to be distributed from distribution centers to marts in the table below.
         """)
-    st.image("D:/working plan/CV/portfolio/load_proportion.jpg", caption="Load proportion by distribution center", use_container_width=True)
+    st.image("load_proportion.jpg", caption="Load proportion by distribution center", use_container_width=True)
     st.write("""
         ##### IV. Conclusion
         This project gave me a better understanding of how to apply data analysis tools in practice.
 
         The Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.
+
         """)
