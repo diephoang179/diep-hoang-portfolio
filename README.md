@@ -8,7 +8,7 @@ Welcome to my portfolio, which is developed utilizing **Streamlit**, the renowne
 
 Experience the live version hosted on **Streamlit**
 
-[Explore the Customer Segmentation App](https://sentiment-app-tiki.streamlit.app/)
+[Explore My Portforlio]([https://sentiment-app-tiki.streamlit.app/](https://diep-hoang-portfolio-2rfj7xefmnm8q25af2ybdc.streamlit.app/))
 
 #### **Project Specifications**
 
