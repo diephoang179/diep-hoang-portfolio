@@ -1,7 +1,5 @@
 ### **My Pofrtfolio 👤**
 
-![Customer-Segmentation png](https://github.com/tieugem1997/CustomerSegmentation_Streamlit/assets/39017335/32be23de-981f-4865-9676-6712560f3097)
-
 #### **About**
 
 Welcome to my portfolio, which is developed utilizing **Streamlit**, the renowned open-source Python framework. This portforlio is designed to help you learn more about me and explore my mini project on data analysis.
