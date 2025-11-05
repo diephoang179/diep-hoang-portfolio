@@ -40,6 +40,8 @@ if choice == 'About Me':
         - Developed a Google Sheet to track rider's attendance based on GPS and order log data, and to calculate the weekly income of over 120 riders, including fixed salary and performance-based incentives.
 
         Besides that, I’ve completed a mini delivery analysis project, which you can explore on page **Delivery Analysis Project**. Hope you enjoy exploring it!
+        
+        I always welcome new insights and feedback. You can reach out to me via email or LinkedIn.
         """)
 
 if choice == 'Delivery Analysis Project':
@@ -114,8 +116,8 @@ if choice == 'Delivery Analysis Project':
     st.image("load_proportion.jpg", caption="Load proportion by distribution center", use_container_width=True)
     st.write("""
         ##### IV. Conclusion
-        This project gave me a better understanding of how to apply data analysis tools in practice.
-
         The Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.
-
+        
+        And this project gave me a better understanding of how to apply data analysis tools in practice.
         """)
+
