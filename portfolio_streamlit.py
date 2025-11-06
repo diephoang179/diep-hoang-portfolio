@@ -34,12 +34,7 @@ if choice == 'About Me':
         ✔️ Looker Dashboard Visulization\\
         ✔️ Report generation and scheduling
 
-        ##### List of some typical achievements:
-        - Automated daily reports using G-Sheets formulas and GAS, scheduling data consolidation from multiple source sheets into a single master report.
-        - Developed an automated email alert system to notify relevant departments upon dispute form submissions.
-        - Developed an simple automated chatbot notification in Google Chat Workspace on an hourly basis.
-        - Developed a Google Sheet to track rider's attendance based on GPS and order log data, and to calculate the weekly income of over 120 riders, including fixed salary and performance-based incentives.
-
+        ##### List of some typical projects:
         **Here are some of my projects — I hope you enjoy exploring them!**\\
         If you have any insights or feedback, feel free to reach out to me via email or LinkedIn.
         
@@ -145,11 +140,3 @@ if choice == 'Delivery Analysis Project':
         Overall, the Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.        
         This project also gave me valuable hands-on experience in applying data analysis tools to real operational data.
         """)
-
-
-
-
-
-
-
-
