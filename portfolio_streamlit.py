@@ -40,8 +40,30 @@ if choice == 'About Me':
         - Developed an simple automated chatbot notification in Google Chat Workspace on an hourly basis.
         - Developed a Google Sheet to track rider's attendance based on GPS and order log data, and to calculate the weekly income of over 120 riders, including fixed salary and performance-based incentives.
 
-        Besides that, I’ve completed a mini delivery analysis project, which you can explore on page **Delivery Analysis Project**. Hope you enjoy exploring it!
-        And if you did, I always welcome new insights and feedback. You can reach out to me via email or LinkedIn.
+        **Here are some of my projects — I hope you enjoy exploring them!**\\
+        If you have any insights or feedback, feel free to reach out to me via email or LinkedIn.
+        
+        1️⃣ **Delivery Analysis**\\
+        **Tools:** Google Sheets, Looker Dashboard\\
+        **Goal:** Evaluate delivery performance based on analyzing and visualizing data.\\
+        **What I did:**\\
+        ●   Build an interactive dashboard to visualize delivery performance by carrier.\\
+        ●   Identify key factors affecting delivery performance.\\
+        ●   Provide some relevant insights.\\
+        **Key features:**\\
+        ✔️  Data processing and visualizing.\\
+        ✔️  Data analyzing.\\
+        **Details:** Please learn more at **Data Analysis Project** page.\\
+
+        2️⃣ **Customer Segmentation**\\
+        **Tools:** Python\\
+        **Goal:** Built an application to automate customer segmentation using RFM analysis, enabling marketing teams to identify high-value customers and personalize promotional strategies efficiently.\\
+        **What I did:**\\
+        ●   Applied the K-Means clustering model to perform RFM analysis and segment customers.\\
+        ●   Developed an application that allows users to search for customer segments and input new customer data to automatically identify the customer type.\\
+        **Key features:**\\
+        ✔️  Applied machine learning in a case study.\\
+        **Details:** [Customer Segmentation Project](https://customer-segmentation-project-ek2ji3stlguqwsjjqdsi5y.streamlit.app/).
         """)
 
 if choice == 'Delivery Analysis Project':
@@ -54,7 +76,7 @@ if choice == 'Delivery Analysis Project':
         **2. Project objectives:**
         - Build an interactive dashboard to visualize delivery performance by carrier.
         - Identify key factors affecting delivery performance (carrier capacity, delivery time and truck utilization).
-        - Provide some actionable insights and recommendations.
+        - Provide some relevant insights.
         \
         """)
     st.markdown("**Link [data](https://docs.google.com/spreadsheets/d/1c4KkkLPWjM-L-XP_prtbmjIBusoMJs-MsIJP4LKYvCM/edit?gid=1389441584#gid=1389441584)**")
@@ -116,10 +138,13 @@ if choice == 'Delivery Analysis Project':
     st.image("load_proportion.jpg", caption="Load proportion by distribution center", use_container_width=True)
     st.write("""
         ##### IV. Conclusion
-        The Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.
-        
-        And this project gave me a better understanding of how to apply data analysis tools in practice.
+        The analysis shows that medium-sized trucks are the most frequently used vehicle type, indicating that most shipments fall within the 2–5 ton range, which likely balances both capacity and cost efficiency.\\
+        Carrier E, which primarily provides medium trucks, handles the majority of deliveries (around 40% of all bookings), suggesting that it is the preferred and most reliable partner for the supermarket.\\
+        Meanwhile, Carriers A and B serve more specialized purposes — A for small, local shipments with light trucks, and B for heavy-duty, long-distance transportation.\\
+        Overall, the Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.\\        
+        This project also gave me valuable hands-on experience in applying data analysis tools to real operational data.
         """)
+
 
 
 
