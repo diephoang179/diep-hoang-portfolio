@@ -53,7 +53,7 @@ if choice == 'About Me':
         **Key features:**\\
         ✔️  Data processing and visualizing.\\
         ✔️  Data analyzing.\\
-        **Details:** Please learn more at **Data Analysis Project** page.\\
+        **Details:** Please learn more at **Data Analysis Project** page.\
 
         2️⃣ **Customer Segmentation**\\
         **Tools:** Python\\
@@ -138,12 +138,13 @@ if choice == 'Delivery Analysis Project':
     st.image("load_proportion.jpg", caption="Load proportion by distribution center", use_container_width=True)
     st.write("""
         ##### IV. Conclusion
-        The analysis shows that medium-sized trucks are the most frequently used vehicle type, indicating that most shipments fall within the 2–5 ton range, which likely balances both capacity and cost efficiency.\\
-        Carrier E, which primarily provides medium trucks, handles the majority of deliveries (around 40% of all bookings), suggesting that it is the preferred and most reliable partner for the supermarket.\\
+        The analysis shows that medium-sized trucks are the most frequently used vehicle type, indicating that most shipments fall within the 2–5 ton range, which likely balances both capacity and cost efficiency.
+        Carrier E, which primarily provides medium trucks, handles the majority of deliveries (around 40% of all bookings), suggesting that it is the preferred and most reliable partner for the supermarket.
         Meanwhile, Carriers A and B serve more specialized purposes — A for small, local shipments with light trucks, and B for heavy-duty, long-distance transportation.\\
-        Overall, the Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.\\        
+        Overall, the Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.        
         This project also gave me valuable hands-on experience in applying data analysis tools to real operational data.
         """)
+
 
 
 
