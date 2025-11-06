@@ -12,7 +12,7 @@ st.sidebar.markdown("---")  # Đường kẻ phân cách
 st.sidebar.markdown("""**Contact me**""")
 st.sidebar.markdown("📧 hdiep0508@gmail.com")
 st.sidebar.markdown("🔗 [Linkedin](www.linkedin.com/in/diep-hoang-393779a9)")
-st.sidebar.markdown("💻 [Github](https://github.com/diephoang179?tab=repositories)")
+st.sidebar.markdown("💻 [Github](https://github.com/diephoang179)")
 
 if choice == 'About Me':
     st.subheader("About Me")
@@ -120,6 +120,7 @@ if choice == 'Delivery Analysis Project':
         
         And this project gave me a better understanding of how to apply data analysis tools in practice.
         """)
+
 
 
 
