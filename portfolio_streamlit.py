@@ -27,12 +27,13 @@ if choice == 'About Me':
         """)
     st.subheader("Achievements")
     st.write("""
-        I specialize in automating repetitive data tasks and building smart reporting systems in Google Sheets. With 4 years of experience in logistics and operations data management, I’ve helped teams reduce manual work and improve accuracy through custom Apps Script automations and data integrations.
+        I specialize in automating repetitive data tasks and building smart reporting systems in Google Sheets. With 4 years of experience in logistics and operations data management, I’ve helped teams reduce manual work and improve accuracy through custom Apps Script automations and data integrations. Throughout my career, I've discovered my passion working with data and am continously learning to become an expert in data analyst.
         ##### Key skills:
         ✔️ Google Apps Script\\
         ✔️ Google Sheets formulas\\
         ✔️ Looker Dashboard Visulization\\
-        ✔️ Report generation and scheduling
+        ✔️ Report generation and scheduling\\
+        ✔️ Python
 
         ##### List of some typical projects:
         **Here are some of my projects — I hope you enjoy exploring them!**\\
@@ -140,3 +141,4 @@ if choice == 'Delivery Analysis Project':
         Overall, the Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.        
         This project also gave me valuable hands-on experience in applying data analysis tools to real operational data.
         """)
+
