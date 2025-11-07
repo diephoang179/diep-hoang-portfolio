@@ -53,10 +53,10 @@ if choice == 'About Me':
 
         2️⃣ **Customer Segmentation**\\
         **Tools:** Python\\
-        **Goal:** Built an application to automate customer segmentation using RFM analysis, enabling marketing teams to identify high-value customers and personalize promotional strategies efficiently.\\
+        **Goal:** Built an simple application to automate customer segmentation using RFM analysis, enabling marketing teams to identify high-value customers and personalize promotional strategies efficiently.\\
         **What I did:**\\
         ●   Applied the K-Means clustering model to perform RFM analysis and segment customers.\\
-        ●   Developed an application that allows users to search for customer segments and input new customer data to automatically identify the customer type.\\
+        ●   Developed an simple application that allows users to search for customer segments and input new customer data to automatically identify the customer type.\\
         **Key features:**\\
         ✔️  Applied machine learning in a case study.\\
         **Details:** [Customer Segmentation Project](https://customer-segmentation-project-ek2ji3stlguqwsjjqdsi5y.streamlit.app/).
@@ -141,4 +141,5 @@ if choice == 'Delivery Analysis Project':
         Overall, the Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.        
         This project also gave me valuable hands-on experience in applying data analysis tools to real operational data.
         """)
+
 
