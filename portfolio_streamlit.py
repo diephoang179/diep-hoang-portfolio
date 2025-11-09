@@ -66,81 +66,54 @@ if choice == 'Delivery Analysis Project':
     st.subheader("Mini Delivery Analysis Project")
     st.write("""
         ##### I. Project Overview
-        **1. Data source:**
+        **1. About data source:**
         The dataset contains delivery data from a supermarket distribution network, covering the period from June 2024 to November 2024. It records all booking details and delivery shipments from distribution centers (DCs) to retail marts across multiple provinces.\\
         \\
         **2. Project objectives:**
         - Build an interactive dashboard to visualize delivery performance by carrier.
         - Identify key factors affecting delivery performance (carrier capacity, delivery time and truck utilization).
         - Provide some relevant insights.
-        \
+        **3. Data analysis process steps:**
         """)
-    st.markdown("**Link [data](https://docs.google.com/spreadsheets/d/1c4KkkLPWjM-L-XP_prtbmjIBusoMJs-MsIJP4LKYvCM/edit?gid=1389441584#gid=1389441584)**")
-    st.markdown("**Link [dashboard](https://lookerstudio.google.com/reporting/9e4647d9-85e7-4f9c-84da-7adefc4d9663)**")
+    st.image("process_steps.jpg", caption="Process steps", use_container_width=True)
+    st.markdown("**Link [data](https://docs.google.com/spreadsheets/d/1yLLasMDPSpGWDgLYwJQxUi5f2DTypsJgGdGc8iNd3ac/edit?gid=1389441584#gid=1389441584)**")
+    st.markdown("**Link [dashboard](https://lookerstudio.google.com/reporting/f9760e61-0bdc-43f6-9989-2942b6fa4f96)**")
     st.write("""
-        \
-        ##### II. Data Selection And Processing
-        After carefully reviewing the dataset, I identified opportunities to leverage the data to evaluate delivery performance for each carrier based on three key aspects:
-        - Carrier fleet capacity
-        - Time performance
-        - Truck utilization rate
-
-        I then selected the relevant fields and performed calculations to generate the booking_data_summary sheet, containing 19 columns and 1,049 rows, where each record represents information for one booking ID (one trip).
-
         ##### III. Data Analysis
-        ###### 1. Carrier fleet capacity overview
+        ###### 1. Overview
+        Overall, the delivery performance remained stable with promising indicators.
+        Firstly, although the number of bookings increased significantly in August and November — roughly one-third higher than in other months — the lead time showed a slightly decreasing trend from August onward and remained relatively stable in the following months.
+        At the same time, truck utilization stayed consistently high at around 99%.
         """)
-    st.image("carrier_fleet_capacity.jpg", caption="Carrier fleet capacity", use_container_width=True)
+    st.image("time_trend.jpg", caption="Bookings trend", use_container_width=True)
     st.write("""
-        From the chart, we can observe that:
-        - Carrier A is rarely used and mainly provides light trucks (≤ 2 tons).
-        - Carrier B is used more frequently than Carrier A and only supplies extra heavy trucks (> 10 tons).
-        - Carriers C and D appear to have a similar number of bookings.
-        - Carrier C offers a wide variety of truck types, which may be one of the reasons it is often selected.
-        - Carrier E is the most frequently used carrier, accounting for approximately 40% of all bookings, and mainly provides medium-sized trucks (> 2 and ≤ 5 tons).
-        - Overall, the supermarket most commonly uses medium-sized trucks for deliveries and rarely uses light truck.
+        Additionally, in spite of slight changes in the number of bookings by truck type in November, the distribution of carrier usage remained stable, with Carrier E and medium-sized trucks being the most frequently used, while Carrier A and light-sized trucks were the least utilized.
+    """)
+    st.image("booking_trend.jpg", caption="Truck bookings distribution", use_container_width=True)
+    st.image("truck_type_by_carrier.jpg", caption="Truck type usage by carrier", use_container_width=True)
+    st.write("""
+        As the dataset only covers six months, it is difficult to confirm whether these fluctuations indicate a seasonal trend. However, the peaks in August and November may reflect higher demand during these months or suggest that August’s stock planning was intended to support 2 months upcoming demand. Further analysis of demand patterns would help in developing an efficient transportation plan.
         
-        ###### 2. Time performance
-        """)
-    st.image("time_performance.jpg", caption="Time performance", use_container_width=True)
+        ###### 2. Detail by Carrier
+        In general, each carrier shows distinct operational characteristics in terms of truck types and delivery coverage:
+        -	Carrier A mainly provides light trucks for Mart F, with time performance improving from August and remaining stable afterward.
+        -	Carrier C operates various truck types for Mart F, showing a similar improvement and stable trend after August.
+        -	Carrier B uses only extra-heavy trucks for Mart D, with consistently stable delivery performance.
+        -	Carrier D provides medium and light trucks from DC B to Mart E, with a sharp performance drop in August followed by stabilization.
+        -	Carrier F serves Mart E using medium and light trucks from DCs A and C, maintaining stable performance over time.
 
-    # Đọc dữ liệu để tạo bảng thống kê mô tả cho 2 chỉ số time performance
-    clean_data = pd.read_csv("data_cleaning.csv")
-    time_data = clean_data[["pickup_time (days)","delivery_time (days)"]]
-    # Xem thống kê mô tả
-    # Hiển thị tiêu đề
-    st.markdown("**Thống kê mô tả về 2 chỉ số thời gian**")
-    # Hiển thị bảng thống kê mô tả
-    st.dataframe(time_data.describe())
-    st.write("""
-        Overall, pickup times are quite similar among carriers operating on the same route.
-        However, Carrier B shows abnormal pickup durations on routes CB and AC.
-        When I analyzed the data further, I found that pickup times have a large standard deviation and a noticeable gap between the median and mean values.
-        This suggests the presence of outlier trips, mainly associated with Carrier B on the two routes mentioned earlier — possibly due to unexpected handling issues during those trips.
-
-        In addition, pickup trips managed by Carrier B tend to take longer, while those handled by Carrier A are generally quicker.
-        Since the dataset does not account for waiting time while the warehouse arranges loading staff, we can assume that larger truck sizes (with more parcels) may increase the loading arrangement time, leading to longer pickup durations.
+        Truck utilization rates remain high overall, especially for heavy and extra-heavy trucks, where utilization mainly depends on cargo volume (CBM).
         
-        Furthermore, the delivery time chart shows that light trucks (Carrier A) appear to be faster than heavier trucks (Carrier C) on the same routes.
-        However, since most carriers operate on unique routes and the available data is limited, we cannot further explore deeper insights about delivery time at this stage.
-        ###### 2. Truck utiliztion rate
+        Additionally, handling time for waiting and loading tends to be longer for extra-heavy trucks compared to other types.
         """)
-    st.image("truck_utilization.jpg", caption="Truck utilization rate", use_container_width=True)
-    st.write("""
-        The table and indicators show that the truck utilization rate is at a good level (over 99%)..
-
-        We can also see more details about the amount of goods that need to be distributed from distribution centers to marts in the table below.
-        """)
-    st.image("load_proportion.jpg", caption="Load proportion by distribution center", use_container_width=True)
+    st.image("detail_truck_utilization.jpg", caption="Truck utilization table and handle time by truck type chart", use_container_width=True)
     st.write("""
         ##### IV. Conclusion
-        The analysis shows that medium-sized trucks are the most frequently used vehicle type, indicating that most shipments fall within the 2–5 ton range, which likely balances both capacity and cost efficiency.
-        Carrier E, which primarily provides medium trucks, handles the majority of deliveries (around 40% of all bookings), suggesting that it is the preferred and most reliable partner for the supermarket.
-        Meanwhile, Carriers A and B serve more specialized purposes — A for small, local shipments with light trucks, and B for heavy-duty, long-distance transportation.
+        The Delivery Analysis Report offers a comprehensive overview of each carrier’s delivery performance, highlighting neccessary points and will serves as a key step in enhancing overall operational efficiency and performance metrics.
         
-        Overall, the Delivery Analysis Report provides an overview of each carrier’s delivery performance and serves as an important step toward improving overall performance indices.        
-        This project also gave me valuable hands-on experience in applying data analysis tools to real operational data.
+        Additionally, this project help me improve valuable hands-on experience in applying data analysis tools to real operational data, reinforcing practical skills in extracting insights and supporting data-driven decisions.
         """)
+
 
 
 
