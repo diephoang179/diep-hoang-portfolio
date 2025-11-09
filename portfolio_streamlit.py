@@ -73,9 +73,14 @@ if choice == 'Delivery Analysis Project':
         - Build an interactive dashboard to visualize delivery performance by carrier.
         - Identify key factors affecting delivery performance (carrier capacity, delivery time and truck utilization).
         - Provide some relevant insights.
+        
         **3. Data analysis process steps:**
         """)
     st.image("process_steps.jpg", caption="Process steps", use_container_width=True)
+    st.write("""
+        **4. Result:**
+        You can check the project results here:
+    """)
     st.markdown("**Link [data](https://docs.google.com/spreadsheets/d/1yLLasMDPSpGWDgLYwJQxUi5f2DTypsJgGdGc8iNd3ac/edit?gid=1389441584#gid=1389441584)**")
     st.markdown("**Link [dashboard](https://lookerstudio.google.com/reporting/f9760e61-0bdc-43f6-9989-2942b6fa4f96)**")
     st.write("""
@@ -113,6 +118,7 @@ if choice == 'Delivery Analysis Project':
         
         Additionally, this project help me improve valuable hands-on experience in applying data analysis tools to real operational data, reinforcing practical skills in extracting insights and supporting data-driven decisions.
         """)
+
 
 
 
