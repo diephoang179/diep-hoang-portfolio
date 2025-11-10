@@ -49,7 +49,8 @@ if choice == 'About Me':
         **Key features:**\\
         ✔️  Data processing and visualizing.\\
         ✔️  Data analyzing.\\
-        **Details:** Please learn more at **Data Analysis Project** page.
+        **Details:** Please learn more at **Data Analysis Project** page.\\
+        Link [dashboard](https://lookerstudio.google.com/reporting/f9760e61-0bdc-43f6-9989-2942b6fa4f96)
 
         2️⃣ **Customer Segmentation**\\
         **Tools:** Python\\
@@ -118,6 +119,7 @@ if choice == 'Delivery Analysis Project':
         
         Additionally, this project help me improve valuable hands-on experience in applying data analysis tools to real operational data, reinforcing practical skills in extracting insights and supporting data-driven decisions.
         """)
+
 
 
 
